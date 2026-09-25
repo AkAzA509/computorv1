@@ -1,4 +1,5 @@
 use std::{collections::HashMap, env, error::Error, io};
+use std::io::Write;
 
 type Result<T> = std::result::Result<T, Box<dyn Error>>;
 type Term = (f64, u32);
@@ -12,6 +13,8 @@ fn get_param() -> Result<String> {
         return Err("Error: there are too many or not enough parameters".into());
     }
     if args.len() == 1 {
+    	print!("Enter an polynomial expression: ");
+     	io::stdout().flush().expect("Failed to flush stdout");
         io::stdin().read_line(&mut expr)?;
     }
 
