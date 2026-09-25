@@ -1,6 +1,6 @@
 # Makefile
 
-.PHONY: all debugz
+.PHONY: all debug
 
 all:
 	cargo build --release

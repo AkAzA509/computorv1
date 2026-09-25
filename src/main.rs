@@ -23,8 +23,6 @@ fn get_param() -> Result<String> {
         return Err("Error: the expression is empty".into());
     }
 
-    // println!("Expression enter : {expr}");
-
     return Ok(expr);
 }
 
